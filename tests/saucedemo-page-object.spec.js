@@ -12,7 +12,7 @@ test.describe("Saucedemo Automation Test", { tag: ['@smoke'] }, () => {
     // halaman login
     await loginPage.goto();
     await loginPage.verifyLoginPageVisible();
-    await loginPage.login('standard_user', 'secret_sauce');
+    await loginPage.login(process.env.STANDARD_USER, process.env.PASSWORD);
 
     // halaman products
     await productsPage.verifyDashboardVisible();
@@ -33,7 +33,7 @@ test.describe("Saucedemo Automation Test", () => {
     // halaman login
     await loginPage.goto();
     await loginPage.verifyLoginPageVisible();
-    await loginPage.login('visual_user', 'secret_sauce');
+    await loginPage.login(process.env.VISUAL_USER, process.env.PASSWORD);
 
     // halaman products
     await productsPage.verifyDashboardVisible();
