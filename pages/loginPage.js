@@ -15,6 +15,7 @@ class LoginPage {
 
     async verifyLoginPageVisible() {
         await expect(this.page.locator(this.loginLogo)).toBeVisible()
+        await expect(this.page).toHaveScreenshot('login-page.png', {maxDiffPixelRatio: 0.1})
     }
 
     async login(username, password) {

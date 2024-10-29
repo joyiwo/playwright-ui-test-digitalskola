@@ -10,6 +10,7 @@ class ProductsPage {
 
   async verifyDashboardVisible() {
     await expect(this.page.locator(this.pageTitle)).toBeVisible();
+    await expect(this.page).toHaveScreenshot('dashboard-page.png', {maxDiffPixelRatio: 0.1})
   }
 
   async addItemToCart() {

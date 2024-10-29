@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-test.describe("Saucedemo Automation Test", () => {
+test.describe("Saucedemo Automation Test", { tag: ['@mobile']}, () => {
   test("Login Test", async ({ page }) => {
     await page.goto("https://www.saucedemo.com/"); // masuk ke web sauce demo
     await expect(page.locator('.login_logo')).toBeVisible() // memastikan sudah masuk di login page

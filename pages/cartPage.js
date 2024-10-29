@@ -8,6 +8,7 @@ class CartPage {
 
   async verifyItemInCart(itemName) {
     await expect(this.page.locator(this.itemName)).toContainText(itemName);
+    await expect(this.page).toHaveScreenshot('cart-page.png', {maxDiffPixelRatio: 0.1})
   }
 }
 
